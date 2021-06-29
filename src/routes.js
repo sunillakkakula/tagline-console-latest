@@ -17,8 +17,9 @@
 */
 // @material-ui/icons
 import Dashboard from "@material-ui/icons/Dashboard";
-// import Person from "@material-ui/icons/Person";
 import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import PieChartIcon from "@material-ui/icons/PieChart";
 import ViewModuleIcon from "@material-ui/icons/ViewModule";
 import DashboardPage from "views/Dashboard/Dashboard.js";
 import UserProfile from "views/UserProfile/UserProfile.js";
@@ -57,6 +58,20 @@ const dashboardRoutes = [
     path: "/poduct",
     name: "Product",
     icon: ViewModuleIcon,
+    component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/reports",
+    name: "Reports",
+    icon: AssessmentIcon,
+    component: TableList,
+    layout: "/admin",
+  },
+  {
+    path: "/charts",
+    name: "Charts",
+    icon: PieChartIcon,
     component: TableList,
     layout: "/admin",
   },
