@@ -12,11 +12,11 @@ import Poppers from "@material-ui/core/Popper";
 import Divider from "@material-ui/core/Divider";
 // @material-ui/icons
 import Person from "@material-ui/icons/Person";
-import Notifications from "@material-ui/icons/Notifications";
+// import Notifications from "@material-ui/icons/Notifications";
 import Dashboard from "@material-ui/icons/Dashboard";
-import Search from "@material-ui/icons/Search";
+// import Search from "@material-ui/icons/Search";
 // core components
-import CustomInput from "components/CustomInput/CustomInput.js";
+// import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
@@ -25,18 +25,18 @@ const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
   const classes = useStyles();
-  const [openNotification, setOpenNotification] = React.useState(null);
+  // const [openNotification, setOpenNotification] = React.useState(null);
   const [openProfile, setOpenProfile] = React.useState(null);
-  const handleClickNotification = (event) => {
-    if (openNotification && openNotification.contains(event.target)) {
-      setOpenNotification(null);
-    } else {
-      setOpenNotification(event.currentTarget);
-    }
-  };
-  const handleCloseNotification = () => {
-    setOpenNotification(null);
-  };
+  // const handleClickNotification = (event) => {
+  //   if (openNotification && openNotification.contains(event.target)) {
+  //     setOpenNotification(null);
+  //   } else {
+  //     setOpenNotification(event.currentTarget);
+  //   }
+  // };
+  // const handleCloseNotification = () => {
+  //   setOpenNotification(null);
+  // };
   const handleClickProfile = (event) => {
     if (openProfile && openProfile.contains(event.target)) {
       setOpenProfile(null);
@@ -49,7 +49,7 @@ export default function AdminNavbarLinks() {
   };
   return (
     <div>
-      <div className={classes.searchWrapper}>
+      {/* <div className={classes.searchWrapper}>
         <CustomInput
           formControlProps={{
             className: classes.margin + " " + classes.search,
@@ -64,7 +64,7 @@ export default function AdminNavbarLinks() {
         <Button color="white" aria-label="edit" justIcon round>
           <Search />
         </Button>
-      </div>
+      </div> */}
       <Button
         color={window.innerWidth > 959 ? "transparent" : "white"}
         justIcon={window.innerWidth > 959}
@@ -78,7 +78,7 @@ export default function AdminNavbarLinks() {
         </Hidden>
       </Button>
       <div className={classes.manager}>
-        <Button
+        {/* <Button
           color={window.innerWidth > 959 ? "transparent" : "white"}
           justIcon={window.innerWidth > 959}
           simple={!(window.innerWidth > 959)}
@@ -94,29 +94,29 @@ export default function AdminNavbarLinks() {
               Notification
             </p>
           </Hidden>
-        </Button>
-        <Poppers
-          open={Boolean(openNotification)}
-          anchorEl={openNotification}
-          transition
-          disablePortal
-          className={
-            classNames({ [classes.popperClose]: !openNotification }) +
-            " " +
-            classes.popperNav
-          }
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              id="notification-menu-list-grow"
-              style={{
-                transformOrigin:
-                  placement === "bottom" ? "center top" : "center bottom",
-              }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleCloseNotification}>
+        </Button> 
+        <Poppers 
+          // open={Boolean(openNotification)}
+          // anchorEl={openNotification}
+        //   transition
+        //   disablePortal
+        //   className={
+        //     classNames({ [classes.popperClose]: !openNotification }) +
+        //     " " +
+        //     classes.popperNav
+        //   }
+        // >
+        //   {({ TransitionProps, placement }) => (
+        //     <Grow
+        //       {...TransitionProps}
+        //       id="notification-menu-list-grow"
+        //       style={{
+        //         transformOrigin:
+        //           placement === "bottom" ? "center top" : "center bottom",
+        //       }}
+        //     >
+        //       <Paper>
+                {/* <ClickAwayListener onClickAway={handleCloseNotification}>
                   <MenuList role="menu">
                     <MenuItem
                       onClick={handleCloseNotification}
@@ -149,11 +149,11 @@ export default function AdminNavbarLinks() {
                       Another One
                     </MenuItem>
                   </MenuList>
-                </ClickAwayListener>
-              </Paper>
+                </ClickAwayListener> }
+              {</Paper>
             </Grow>
           )}
-        </Poppers>
+        </Poppers> */}
       </div>
       <div className={classes.manager}>
         <Button

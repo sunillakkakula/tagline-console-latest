@@ -116,7 +116,7 @@ export default function Sidebar(props) {
         >
           {brand}
           <div className={classes.sidebarWrapper}>
-            {props.rtlActive ? <RTLNavbarLinks /> : <AdminNavbarLinks />}
+            <AdminNavbarLinks />
             {links}
           </div>
           {image !== undefined ? (
